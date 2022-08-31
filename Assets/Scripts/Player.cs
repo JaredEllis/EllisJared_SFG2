@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     int _currentHealth;
 
-    TankController _tankController;
+    public TankController _tankController;
 
     [SerializeField] int _treasureAmount;
     public Text _treasureText;
