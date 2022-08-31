@@ -41,5 +41,6 @@ public class Player : MonoBehaviour
     public void Kill()
     {
         gameObject.SetActive(false);
+        //test
     }
 }
