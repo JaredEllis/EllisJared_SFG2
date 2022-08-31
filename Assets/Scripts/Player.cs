@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(TankController))]
 public class Player : MonoBehaviour
@@ -11,6 +12,9 @@ public class Player : MonoBehaviour
     int _currentHealth;
 
     TankController _tankController;
+
+    [SerializeField] int _treasureAmount;
+    public Text _treasureText;
 
     private void Awake()
     {
@@ -43,5 +47,11 @@ public class Player : MonoBehaviour
     {
         gameObject.SetActive(false);
         //test
+    }
+
+    public void IncreaseTreasure(int amount)
+    {
+        _treasureAmount += amount;
+        _treasureText.text = $"Treasure: {_treasureAmount}";
     }
 }

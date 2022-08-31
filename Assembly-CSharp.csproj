@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\CollectibleBase.cs" />
      <Compile Include="Assets\Scripts\HealthIncrease.cs" />
      <Compile Include="Assets\Scripts\SpeedIncrease.cs" />
+     <Compile Include="Assets\Scripts\Treasure.cs" />
+     <Compile Include="Assets\Scripts\Slower.cs" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Unity\2021.3.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
