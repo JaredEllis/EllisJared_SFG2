@@ -7,13 +7,13 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Rigidbody))]
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int _damageAmount;
+    [SerializeField] int _damageAmount = 1;
 
-    [SerializeField] private ParticleSystem _impactParticles;
+    [SerializeField] ParticleSystem _impactParticles;
 
-    [SerializeField] private AudioClip _impactSound;
+    [SerializeField] AudioClip _impactSound;
 
-    private Rigidbody _rb;
+    Rigidbody _rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void PlayerImpact(Player player)
+    public virtual void PlayerImpact(Player player)
     {
         player.DecreaseHealth(_damageAmount);
     }

@@ -6,11 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(TankController))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private int _maxHealth;
+    [SerializeField] int _maxHealth = 3;
 
-    private int _currentHealth;
+    int _currentHealth;
 
-    private TankController _tankController;
+    TankController _tankController;
 
     private void Awake()
     {
